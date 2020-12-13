@@ -27,13 +27,19 @@ sed -i.bak -e "s/JUCEPluginTemplate/${plugin_name}/g" README.md
 sed -i.bak -e "s/JUCE Plugin Template/${plugin_name}/g" README.md
 
 # Remove `run setup.sh` lines from Travis and README
-sed -i.bak -e '42,46d' .github/workflows/cmake.yml
+sed -i.bak -e '42,44d' .github/workflows/cmake.yml
 sed -i.bak -e '/setup.sh/{N;d;}' README.md
 sed -i.bak -e '/set up plugin/d' README.md
 
 # Clean up files we no longer need
 rm *.bak
 rm */*.bak
+
+if [ "$2" -eq "--no-clean" ]; then
+    echo "Skipping cleanup"
+    exit 0
+fi
+
 rm setup.sh
 
 # Stop tracking from template repo
