@@ -57,3 +57,9 @@ jobs:
     - name: Validate
       if: runner.os == 'Windows'
       run: bash validate.sh
+
+    - name: Validate (auval)
+      if: runner.os == 'MacOS'
+      run: |
+        cp -R build/MyPlugin_artefacts/Release/AU/MyPlugin.component /Library/Audio/Plug-Ins/Components/
+        auval -h
