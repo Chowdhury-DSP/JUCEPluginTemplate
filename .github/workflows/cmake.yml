@@ -62,4 +62,4 @@ jobs:
       if: runner.os == 'MacOS'
       run: |
         sudo cp -R build/MyPlugin_artefacts/AU/MyPlugin.component /Library/Audio/Plug-Ins/Components/
-        auval -h
+        auval -s aufx
