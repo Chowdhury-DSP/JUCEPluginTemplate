@@ -61,5 +61,5 @@ jobs:
     - name: Validate (auval)
       if: runner.os == 'MacOS'
       run: |
-        cp -R build/MyPlugin_artefacts/Release/AU/MyPlugin.component /Library/Audio/Plug-Ins/Components/
+        cp -R build/MyPlugin_artefacts/AU/MyPlugin.component /Library/Audio/Plug-Ins/Components/
         auval -h
