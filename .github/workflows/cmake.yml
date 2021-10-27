@@ -63,5 +63,5 @@ jobs:
       run: |
         sudo cp -R build/MyPlugin_artefacts/AU/MyPlugin.component /Library/Audio/Plug-Ins/Components
         manu=$(cut -f 6 -d ' ' <<< "$(grep 'PLUGIN_MANUFACTURER_CODE' CMakeLists.txt)")
-        auval -s aufx
+        auval -al
         auval -vt aufx "$manu"
