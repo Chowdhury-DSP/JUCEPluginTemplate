@@ -61,7 +61,7 @@ jobs:
     - name: Validate (auval)
       if: runner.os == 'MacOS'
       run: |
-        sudo cp -R build/MyPlugin_artefacts/AU/MyPlugin.component /Library/Audio/Plug-Ins/Components
+        sudo cp -R build/MyPlugin_artefacts/AU/MyPlugin.component /System/Library/Components
         manu=$(cut -f 6 -d ' ' <<< "$(grep 'PLUGIN_MANUFACTURER_CODE' CMakeLists.txt)")
         auval -al
         auval -vt aufx "$manu"
