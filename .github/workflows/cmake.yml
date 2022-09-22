@@ -45,7 +45,7 @@ jobs:
       run: |
         git config --global user.email "jatinchowdhury18@gmail.com"
         git config --global user.name "Jatin Chowdhury"
-        bash setup.sh MyPlugin
+        bash setup.sh MyPlugin Tst2
 
     - name: Configure
       shell: bash
