@@ -10,8 +10,6 @@ if [ -z "$2" ]; then
     exit 1
 fi
 
-exit
-
 plugin_name=$1
 plugin_id=$2
 echo "Creating plugin ${plugin_name}, with ID ${plugin_id} ..."
