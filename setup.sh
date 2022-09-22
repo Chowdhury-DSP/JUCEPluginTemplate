@@ -69,16 +69,6 @@ git submodule update --init --recursive
     git log -n 1
 )
 
-# update foleys_gui_magic
-(
-    echo "Updating submodule: foleys_gui_magic..."
-    cd modules/foleys_gui_magic
-    git fetch origin
-    git checkout chowdsp
-    git pull
-    git log -n 1
-)
-
 # Stop tracking from template repo
 git remote remove origin
 
