@@ -56,6 +56,6 @@ target_include_directories(juce_plugin_modules
 set_target_properties(juce_plugin_modules PROPERTIES
     POSITION_INDEPENDENT_CODE TRUE
     VISIBILITY_INLINES_HIDDEN TRUE
-    C_VISBILITY_PRESET hidden
+    C_VISIBILITY_PRESET hidden
     CXX_VISIBILITY_PRESET hidden
 )
